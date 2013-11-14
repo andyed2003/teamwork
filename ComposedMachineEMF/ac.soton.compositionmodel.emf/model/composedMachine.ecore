@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ComposedMachine" nsURI="" nsPrefix="ComposedMachine">
+  <eClassifiers xsi:type="ecore:EClass" name="Composed Machine">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refines" upperBound="-1"
+        eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sees" upperBound="-1" eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//context/Context"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+        eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="invariants" upperBound="-1"
+        eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Invariant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composes" upperBound="-1"
+        eType="#//composedEvents"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="composedEvents" eSuperTypes="../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//EventBNamedCommentedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="convergence" eType="ecore:EEnum ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Convergence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refines" upperBound="-1"
+        eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="combinesEvents" upperBound="-1"
+        eType="#//combinedEvents"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="combinedEvents">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="machine" eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="ecore:EClass ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//machine/Event"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventBNamedElement" eSuperTypes="../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//EventBNamed ../../EMF_EventB/org.eventb.emf.core/model/eventbcore.ecore#//EventBElement"/>
+</ecore:EPackage>
