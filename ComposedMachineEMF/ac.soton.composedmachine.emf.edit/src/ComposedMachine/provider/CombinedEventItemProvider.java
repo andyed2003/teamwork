@@ -186,7 +186,7 @@ public class CombinedEventItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
+		return ComposedMachineEditPlugin.INSTANCE;
 	}
 
 }

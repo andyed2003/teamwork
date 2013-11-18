@@ -10,13 +10,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eventb.emf.core.machine.Convergence;
@@ -80,7 +84,7 @@ public class ComposedEventImpl extends EObjectImpl implements ComposedEvent {
 	protected String comment = COMMENT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRefines() <em>Refines</em>}' reference list.
+	 * The cached value of the '{@link #getRefines() <em>Refines</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRefines()
@@ -90,7 +94,7 @@ public class ComposedEventImpl extends EObjectImpl implements ComposedEvent {
 	protected EList<Event> refines;
 
 	/**
-	 * The cached value of the '{@link #getCombinedEvents() <em>Combined Events</em>}' reference list.
+	 * The cached value of the '{@link #getCombinedEvents() <em>Combined Events</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCombinedEvents()
@@ -167,7 +171,7 @@ public class ComposedEventImpl extends EObjectImpl implements ComposedEvent {
 	 */
 	public EList<Event> getRefines() {
 		if (refines == null) {
-			refines = new EObjectResolvingEList<Event>(Event.class, this, ComposedMachinePackage.COMPOSED_EVENT__REFINES);
+			refines = new EObjectContainmentEList.Resolving<Event>(Event.class, this, ComposedMachinePackage.COMPOSED_EVENT__REFINES);
 		}
 		return refines;
 	}
@@ -179,9 +183,25 @@ public class ComposedEventImpl extends EObjectImpl implements ComposedEvent {
 	 */
 	public EList<CombinedEvent> getCombinedEvents() {
 		if (combinedEvents == null) {
-			combinedEvents = new EObjectResolvingEList<CombinedEvent>(CombinedEvent.class, this, ComposedMachinePackage.COMPOSED_EVENT__COMBINED_EVENTS);
+			combinedEvents = new EObjectContainmentEList.Resolving<CombinedEvent>(CombinedEvent.class, this, ComposedMachinePackage.COMPOSED_EVENT__COMBINED_EVENTS);
 		}
 		return combinedEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ComposedMachinePackage.COMPOSED_EVENT__REFINES:
+				return ((InternalEList<?>)getRefines()).basicRemove(otherEnd, msgs);
+			case ComposedMachinePackage.COMPOSED_EVENT__COMBINED_EVENTS:
+				return ((InternalEList<?>)getCombinedEvents()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

@@ -33,7 +33,7 @@ import org.eventb.emf.core.machine.Machine;
  */
 public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	/**
-	 * Returns the value of the '<em><b>Refines</b></em>' reference list.
+	 * Returns the value of the '<em><b>Refines</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Machine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -41,15 +41,15 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refines</em>' reference list.
+	 * @return the value of the '<em>Refines</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedMachine__Refines()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Machine> getRefines();
 
 	/**
-	 * Returns the value of the '<em><b>Sees</b></em>' reference list.
+	 * Returns the value of the '<em><b>Sees</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eventb.emf.core.context.Context}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -57,15 +57,15 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sees</em>' reference list.
+	 * @return the value of the '<em>Sees</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedMachine__Sees()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Context> getSees();
 
 	/**
-	 * Returns the value of the '<em><b>Includes</b></em>' reference list.
+	 * Returns the value of the '<em><b>Includes</b></em>' containment reference list.
 	 * The list contents are of type {@link ComposedMachine.IncludedMachine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -73,15 +73,15 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Includes</em>' reference list.
+	 * @return the value of the '<em>Includes</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedMachine__Includes()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<IncludedMachine> getIncludes();
 
 	/**
-	 * Returns the value of the '<em><b>Invariants</b></em>' reference list.
+	 * Returns the value of the '<em><b>Invariants</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Invariant}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -89,15 +89,15 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Invariants</em>' reference list.
+	 * @return the value of the '<em>Invariants</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedMachine__Invariants()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Invariant> getInvariants();
 
 	/**
-	 * Returns the value of the '<em><b>Composed Events</b></em>' reference list.
+	 * Returns the value of the '<em><b>Composed Events</b></em>' containment reference list.
 	 * The list contents are of type {@link ComposedMachine.ComposedEvent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -105,9 +105,9 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Composed Events</em>' reference list.
+	 * @return the value of the '<em>Composed Events</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedMachine__ComposedEvents()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<ComposedEvent> getComposedEvents();

@@ -141,7 +141,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_MACHINE___NAME = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Refines</b></em>' reference list.
+	 * The feature id for the '<em><b>Refines</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,7 +150,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_MACHINE___REFINES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Sees</b></em>' reference list.
+	 * The feature id for the '<em><b>Sees</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -159,7 +159,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_MACHINE___SEES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Includes</b></em>' reference list.
+	 * The feature id for the '<em><b>Includes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -168,7 +168,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_MACHINE___INCLUDES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Invariants</b></em>' reference list.
+	 * The feature id for the '<em><b>Invariants</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_MACHINE___INVARIANTS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Composed Events</b></em>' reference list.
+	 * The feature id for the '<em><b>Composed Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -278,7 +278,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_EVENT__COMMENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Refines</b></em>' reference list.
+	 * The feature id for the '<em><b>Refines</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -287,7 +287,7 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_EVENT__REFINES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Combined Events</b></em>' reference list.
+	 * The feature id for the '<em><b>Combined Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -372,10 +372,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EClass getComposedMachine_();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedMachine_#getRefines <em>Refines</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedMachine_#getRefines <em>Refines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Refines</em>'.
+	 * @return the meta object for the containment reference list '<em>Refines</em>'.
 	 * @see ComposedMachine.ComposedMachine_#getRefines()
 	 * @see #getComposedMachine_()
 	 * @generated
@@ -383,10 +383,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EReference getComposedMachine__Refines();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedMachine_#getSees <em>Sees</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedMachine_#getSees <em>Sees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sees</em>'.
+	 * @return the meta object for the containment reference list '<em>Sees</em>'.
 	 * @see ComposedMachine.ComposedMachine_#getSees()
 	 * @see #getComposedMachine_()
 	 * @generated
@@ -394,10 +394,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EReference getComposedMachine__Sees();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedMachine_#getIncludes <em>Includes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedMachine_#getIncludes <em>Includes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Includes</em>'.
+	 * @return the meta object for the containment reference list '<em>Includes</em>'.
 	 * @see ComposedMachine.ComposedMachine_#getIncludes()
 	 * @see #getComposedMachine_()
 	 * @generated
@@ -405,10 +405,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EReference getComposedMachine__Includes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedMachine_#getInvariants <em>Invariants</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedMachine_#getInvariants <em>Invariants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Invariants</em>'.
+	 * @return the meta object for the containment reference list '<em>Invariants</em>'.
 	 * @see ComposedMachine.ComposedMachine_#getInvariants()
 	 * @see #getComposedMachine_()
 	 * @generated
@@ -416,10 +416,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EReference getComposedMachine__Invariants();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedMachine_#getComposedEvents <em>Composed Events</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedMachine_#getComposedEvents <em>Composed Events</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Composed Events</em>'.
+	 * @return the meta object for the containment reference list '<em>Composed Events</em>'.
 	 * @see ComposedMachine.ComposedMachine_#getComposedEvents()
 	 * @see #getComposedMachine_()
 	 * @generated
@@ -513,10 +513,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EAttribute getComposedEvent_Comment();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedEvent#getRefines <em>Refines</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedEvent#getRefines <em>Refines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Refines</em>'.
+	 * @return the meta object for the containment reference list '<em>Refines</em>'.
 	 * @see ComposedMachine.ComposedEvent#getRefines()
 	 * @see #getComposedEvent()
 	 * @generated
@@ -524,10 +524,10 @@ public interface ComposedMachinePackage extends EPackage {
 	EReference getComposedEvent_Refines();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ComposedMachine.ComposedEvent#getCombinedEvents <em>Combined Events</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedEvent#getCombinedEvents <em>Combined Events</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Combined Events</em>'.
+	 * @return the meta object for the containment reference list '<em>Combined Events</em>'.
 	 * @see ComposedMachine.ComposedEvent#getCombinedEvents()
 	 * @see #getComposedEvent()
 	 * @generated
@@ -620,7 +620,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EClass COMPOSED_MACHINE_ = eINSTANCE.getComposedMachine_();
 
 		/**
-		 * The meta object literal for the '<em><b>Refines</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Refines</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -628,7 +628,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EReference COMPOSED_MACHINE___REFINES = eINSTANCE.getComposedMachine__Refines();
 
 		/**
-		 * The meta object literal for the '<em><b>Sees</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Sees</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -636,7 +636,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EReference COMPOSED_MACHINE___SEES = eINSTANCE.getComposedMachine__Sees();
 
 		/**
-		 * The meta object literal for the '<em><b>Includes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Includes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -644,7 +644,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EReference COMPOSED_MACHINE___INCLUDES = eINSTANCE.getComposedMachine__Includes();
 
 		/**
-		 * The meta object literal for the '<em><b>Invariants</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Invariants</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -652,7 +652,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EReference COMPOSED_MACHINE___INVARIANTS = eINSTANCE.getComposedMachine__Invariants();
 
 		/**
-		 * The meta object literal for the '<em><b>Composed Events</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Composed Events</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -728,7 +728,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EAttribute COMPOSED_EVENT__COMMENT = eINSTANCE.getComposedEvent_Comment();
 
 		/**
-		 * The meta object literal for the '<em><b>Refines</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Refines</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -736,7 +736,7 @@ public interface ComposedMachinePackage extends EPackage {
 		EReference COMPOSED_EVENT__REFINES = eINSTANCE.getComposedEvent_Refines();
 
 		/**
-		 * The meta object literal for the '<em><b>Combined Events</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Combined Events</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

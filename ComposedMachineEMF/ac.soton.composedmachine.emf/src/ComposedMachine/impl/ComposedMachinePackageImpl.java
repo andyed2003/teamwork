@@ -412,11 +412,11 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(composedMachine_EClass, ComposedMachine_.class, "ComposedMachine_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComposedMachine__Refines(), theMachinePackage.getMachine(), null, "refines", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposedMachine__Sees(), theContextPackage.getContext(), null, "sees", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposedMachine__Includes(), this.getIncludedMachine(), null, "includes", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposedMachine__Invariants(), theMachinePackage.getInvariant(), null, "invariants", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposedMachine__ComposedEvents(), this.getComposedEvent(), null, "composedEvents", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedMachine__Refines(), theMachinePackage.getMachine(), null, "refines", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedMachine__Sees(), theContextPackage.getContext(), null, "sees", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedMachine__Includes(), this.getIncludedMachine(), null, "includes", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedMachine__Invariants(), theMachinePackage.getInvariant(), null, "invariants", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedMachine__ComposedEvents(), this.getComposedEvent(), null, "composedEvents", null, 0, -1, ComposedMachine_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(includedMachineEClass, IncludedMachine.class, "IncludedMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIncludedMachine_Project(), theCorePackage.getProject(), null, "project", null, 0, 1, IncludedMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -427,8 +427,8 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 		initEClass(composedEventEClass, ComposedEvent.class, "ComposedEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComposedEvent_Convergence(), theMachinePackage.getConvergence(), "convergence", null, 0, 1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComposedEvent_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposedEvent_Refines(), theMachinePackage.getEvent(), null, "refines", null, 0, -1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposedEvent_CombinedEvents(), this.getCombinedEvent(), null, "combinedEvents", null, 0, -1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedEvent_Refines(), theMachinePackage.getEvent(), null, "refines", null, 0, -1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposedEvent_CombinedEvents(), this.getCombinedEvent(), null, "combinedEvents", null, 0, -1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(combinedEventEClass, CombinedEvent.class, "CombinedEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCombinedEvent_Project(), theCorePackage.getProject(), null, "project", null, 0, 1, CombinedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

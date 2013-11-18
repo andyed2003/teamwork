@@ -225,7 +225,7 @@ public class ComposedEventItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
+		return ComposedMachineEditPlugin.INSTANCE;
 	}
 
 }

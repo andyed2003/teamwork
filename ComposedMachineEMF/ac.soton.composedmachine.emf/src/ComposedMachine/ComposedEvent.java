@@ -85,7 +85,7 @@ public interface ComposedEvent extends EObject {
 	void setComment(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Refines</b></em>' reference list.
+	 * Returns the value of the '<em><b>Refines</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Event}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -93,15 +93,15 @@ public interface ComposedEvent extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refines</em>' reference list.
+	 * @return the value of the '<em>Refines</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedEvent_Refines()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Event> getRefines();
 
 	/**
-	 * Returns the value of the '<em><b>Combined Events</b></em>' reference list.
+	 * Returns the value of the '<em><b>Combined Events</b></em>' containment reference list.
 	 * The list contents are of type {@link ComposedMachine.CombinedEvent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -109,9 +109,9 @@ public interface ComposedEvent extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Combined Events</em>' reference list.
+	 * @return the value of the '<em>Combined Events</em>' containment reference list.
 	 * @see ComposedMachine.ComposedMachinePackage#getComposedEvent_CombinedEvents()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<CombinedEvent> getCombinedEvents();

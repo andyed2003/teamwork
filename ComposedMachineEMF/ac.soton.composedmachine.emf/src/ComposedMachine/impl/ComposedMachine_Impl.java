@@ -9,10 +9,14 @@ import ComposedMachine.IncludedMachine;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eventb.emf.core.context.Context;
@@ -41,7 +45,7 @@ import org.eventb.emf.core.machine.Machine;
  */
 public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implements ComposedMachine_ {
 	/**
-	 * The cached value of the '{@link #getRefines() <em>Refines</em>}' reference list.
+	 * The cached value of the '{@link #getRefines() <em>Refines</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRefines()
@@ -51,7 +55,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	protected EList<Machine> refines;
 
 	/**
-	 * The cached value of the '{@link #getSees() <em>Sees</em>}' reference list.
+	 * The cached value of the '{@link #getSees() <em>Sees</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSees()
@@ -61,7 +65,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	protected EList<Context> sees;
 
 	/**
-	 * The cached value of the '{@link #getIncludes() <em>Includes</em>}' reference list.
+	 * The cached value of the '{@link #getIncludes() <em>Includes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIncludes()
@@ -71,7 +75,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	protected EList<IncludedMachine> includes;
 
 	/**
-	 * The cached value of the '{@link #getInvariants() <em>Invariants</em>}' reference list.
+	 * The cached value of the '{@link #getInvariants() <em>Invariants</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInvariants()
@@ -81,7 +85,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	protected EList<Invariant> invariants;
 
 	/**
-	 * The cached value of the '{@link #getComposedEvents() <em>Composed Events</em>}' reference list.
+	 * The cached value of the '{@link #getComposedEvents() <em>Composed Events</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComposedEvents()
@@ -116,7 +120,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	 */
 	public EList<Machine> getRefines() {
 		if (refines == null) {
-			refines = new EObjectResolvingEList<Machine>(Machine.class, this, ComposedMachinePackage.COMPOSED_MACHINE___REFINES);
+			refines = new EObjectContainmentEList.Resolving<Machine>(Machine.class, this, ComposedMachinePackage.COMPOSED_MACHINE___REFINES);
 		}
 		return refines;
 	}
@@ -128,7 +132,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	 */
 	public EList<Context> getSees() {
 		if (sees == null) {
-			sees = new EObjectResolvingEList<Context>(Context.class, this, ComposedMachinePackage.COMPOSED_MACHINE___SEES);
+			sees = new EObjectContainmentEList.Resolving<Context>(Context.class, this, ComposedMachinePackage.COMPOSED_MACHINE___SEES);
 		}
 		return sees;
 	}
@@ -140,7 +144,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	 */
 	public EList<IncludedMachine> getIncludes() {
 		if (includes == null) {
-			includes = new EObjectResolvingEList<IncludedMachine>(IncludedMachine.class, this, ComposedMachinePackage.COMPOSED_MACHINE___INCLUDES);
+			includes = new EObjectContainmentEList.Resolving<IncludedMachine>(IncludedMachine.class, this, ComposedMachinePackage.COMPOSED_MACHINE___INCLUDES);
 		}
 		return includes;
 	}
@@ -152,7 +156,7 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	 */
 	public EList<Invariant> getInvariants() {
 		if (invariants == null) {
-			invariants = new EObjectResolvingEList<Invariant>(Invariant.class, this, ComposedMachinePackage.COMPOSED_MACHINE___INVARIANTS);
+			invariants = new EObjectContainmentEList.Resolving<Invariant>(Invariant.class, this, ComposedMachinePackage.COMPOSED_MACHINE___INVARIANTS);
 		}
 		return invariants;
 	}
@@ -164,9 +168,31 @@ public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implem
 	 */
 	public EList<ComposedEvent> getComposedEvents() {
 		if (composedEvents == null) {
-			composedEvents = new EObjectResolvingEList<ComposedEvent>(ComposedEvent.class, this, ComposedMachinePackage.COMPOSED_MACHINE___COMPOSED_EVENTS);
+			composedEvents = new EObjectContainmentEList.Resolving<ComposedEvent>(ComposedEvent.class, this, ComposedMachinePackage.COMPOSED_MACHINE___COMPOSED_EVENTS);
 		}
 		return composedEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ComposedMachinePackage.COMPOSED_MACHINE___REFINES:
+				return ((InternalEList<?>)getRefines()).basicRemove(otherEnd, msgs);
+			case ComposedMachinePackage.COMPOSED_MACHINE___SEES:
+				return ((InternalEList<?>)getSees()).basicRemove(otherEnd, msgs);
+			case ComposedMachinePackage.COMPOSED_MACHINE___INCLUDES:
+				return ((InternalEList<?>)getIncludes()).basicRemove(otherEnd, msgs);
+			case ComposedMachinePackage.COMPOSED_MACHINE___INVARIANTS:
+				return ((InternalEList<?>)getInvariants()).basicRemove(otherEnd, msgs);
+			case ComposedMachinePackage.COMPOSED_MACHINE___COMPOSED_EVENTS:
+				return ((InternalEList<?>)getComposedEvents()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

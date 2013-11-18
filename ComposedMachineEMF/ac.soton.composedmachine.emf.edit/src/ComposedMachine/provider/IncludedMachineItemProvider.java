@@ -224,7 +224,7 @@ public class IncludedMachineItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
+		return ComposedMachineEditPlugin.INSTANCE;
 	}
 
 }

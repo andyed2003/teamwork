@@ -4,14 +4,17 @@
     nsPrefix="ComposedMachine">
   <eClassifiers xsi:type="ecore:EClass" name="ComposedMachine_" eSuperTypes="../../org.eventb.emf.core/model/eventbcore.ecore#//EventBNamedCommentedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refines" upperBound="-1"
-        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sees" upperBound="-1" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//context/Context"/>
+        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sees" upperBound="-1" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//context/Context"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
-        eType="#//IncludedMachine"/>
+        eType="#//IncludedMachine" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="invariants" upperBound="-1"
-        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Invariant"/>
+        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Invariant"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="composedEvents" upperBound="-1"
-        eType="#//ComposedEvent"/>
+        eType="#//ComposedEvent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IncludedMachine">
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//Project"/>
@@ -24,9 +27,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="convergence" eType="ecore:EEnum ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Convergence"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refines" upperBound="-1"
-        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Event"/>
+        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Event"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="combinedEvents" upperBound="-1"
-        eType="#//CombinedEvent"/>
+        eType="#//CombinedEvent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CombinedEvent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//Project"/>
