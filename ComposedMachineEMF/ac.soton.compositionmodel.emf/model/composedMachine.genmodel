@@ -2,8 +2,8 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ac.soton.compositionmodel.emf/src" modelPluginID="ac.soton.compositionmodel.emf"
     modelName="ComposedMachine" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
-    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../org.eventb.emf.core/model/eventbcore.genmodel#//core">
-  <foreignModel>model/composedMachine.ecore</foreignModel>
+    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eventb.emf.core/model/eventbcore.genmodel#//core">
+  <foreignModel>composedMachine.ecore</foreignModel>
   <genPackages prefix="ComposedMachine" disposableProviderFactory="true" ecorePackage="composedMachine.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="composedMachine.ecore#//HasInvariant">
       <genEnumLiterals ecoreEnumLiteral="composedMachine.ecore#//HasInvariant/NoInvariant"/>
