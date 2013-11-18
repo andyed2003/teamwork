@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ComposedMachine.presentation.ComposedMachineModelWizardID"
+            name="%_UI_ComposedMachineModelWizard_label"
+            class="ComposedMachine.presentation.ComposedMachineModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ComposedMachineModelFile.gif">
+         <description>%_UI_ComposedMachineModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="ComposedMachine.presentation.ComposedMachineEditorID"
+            name="%_UI_ComposedMachineEditor_label"
+            icon="icons/full/obj16/ComposedMachineModelFile.gif"
+            extensions="composedmachine"
+            class="ComposedMachine.presentation.ComposedMachineEditor"
+            contributorClass="ComposedMachine.presentation.ComposedMachineActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

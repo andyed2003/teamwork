@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ComposedMachine" nsURI="http://ac.soton.composedmachine.emf.ecore"
+    nsPrefix="ComposedMachine">
+  <eClassifiers xsi:type="ecore:EClass" name="ComposedMachine_" eSuperTypes="../../org.eventb.emf.core/model/eventbcore.ecore#//EventBNamedCommentedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refines" upperBound="-1"
+        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sees" upperBound="-1" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//context/Context"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+        eType="#//IncludedMachine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="invariants" upperBound="-1"
+        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Invariant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composedEvents" upperBound="-1"
+        eType="#//ComposedEvent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncludedMachine">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="machine" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasInvariant" eType="#//HasInvariant"
+        defaultValueLiteral="NoInvariant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComposedEvent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="convergence" eType="ecore:EEnum ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Convergence"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refines" upperBound="-1"
+        eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="combinedEvents" upperBound="-1"
+        eType="#//CombinedEvent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CombinedEvent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="machine" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="ecore:EClass ../../org.eventb.emf.core/model/eventbcore.ecore#//machine/Event"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HasInvariant">
+    <eLiterals name="NoInvariant" literal="NoInvariant"/>
+    <eLiterals name="IncludeInvariant" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
