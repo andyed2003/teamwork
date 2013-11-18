@@ -4,8 +4,8 @@
     dynamicTemplates="true" modelName="ComposedMachine" importerID="org.eclipse.emf.importer.ecore"
     containmentProxies="true" complianceLevel="7.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eventb.emf.core/model/eventbcore.genmodel#//core">
   <foreignModel>composedMachine.ecore</foreignModel>
-  <genPackages prefix="ComposedMachine" disposableProviderFactory="true" childCreationExtenders="true"
-      ecorePackage="composedMachine.ecore#/">
+  <genPackages prefix="ComposedMachine" disposableProviderFactory="true" extensibleProviderFactory="true"
+      childCreationExtenders="true" ecorePackage="composedMachine.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="composedMachine.ecore#//HasInvariant">
       <genEnumLiterals ecoreEnumLiteral="composedMachine.ecore#//HasInvariant/NoInvariant"/>
       <genEnumLiterals ecoreEnumLiteral="composedMachine.ecore#//HasInvariant/IncludeInvariant"/>

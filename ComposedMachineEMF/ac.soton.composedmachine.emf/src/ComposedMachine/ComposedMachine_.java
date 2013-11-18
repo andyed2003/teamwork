@@ -37,7 +37,7 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Machine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Refines</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Refines</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -53,7 +53,7 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * The list contents are of type {@link org.eventb.emf.core.context.Context}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sees</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sees</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -69,7 +69,7 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * The list contents are of type {@link ComposedMachine.IncludedMachine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Includes</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Includes</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -85,7 +85,7 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Invariant}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Invariants</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Invariants</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -101,7 +101,7 @@ public interface ComposedMachine_ extends EventBNamedCommentedElement {
 	 * The list contents are of type {@link ComposedMachine.ComposedEvent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Composed Events</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Composed Events</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

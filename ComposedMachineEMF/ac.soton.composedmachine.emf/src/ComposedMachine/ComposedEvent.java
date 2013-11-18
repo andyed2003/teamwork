@@ -89,7 +89,7 @@ public interface ComposedEvent extends EObject {
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Event}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Refines</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Refines</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -105,7 +105,7 @@ public interface ComposedEvent extends EObject {
 	 * The list contents are of type {@link ComposedMachine.CombinedEvent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Combined Events</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Combined Events</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

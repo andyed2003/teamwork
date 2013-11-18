@@ -20,7 +20,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http://emf.eventb.org/models/core/machine"
+            uri="http://emf.eventb.org/models/machine"
             class="ComposedMachine.provider.ComposedMachineItemProviderAdapterFactory$CoreChildCreationExtender"/>
    </extension>
 
