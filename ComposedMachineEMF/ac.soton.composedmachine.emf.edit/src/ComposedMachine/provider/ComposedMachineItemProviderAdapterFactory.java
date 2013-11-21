@@ -17,6 +17,7 @@ import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.edit.command.CommandParameter;
@@ -40,6 +41,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eventb.emf.core.Annotation;
 import org.eventb.emf.core.CorePackage;
 
+import org.eventb.emf.core.Project;
+import org.eventb.emf.core.context.Context;
+import org.eventb.emf.core.context.ContextPackage;
+import org.eventb.emf.core.context.util.ContextSwitch;
 import org.eventb.emf.core.util.CoreSwitch;
 
 /**
@@ -353,7 +358,7 @@ public class ComposedMachineItemProviderAdapterFactory extends ComposedMachineAd
 			protected EditingDomain editingDomain;
 
 			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
+			 * Creates the switch for populating child descriptors in the given domain.
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -368,11 +373,151 @@ public class ComposedMachineItemProviderAdapterFactory extends ComposedMachineAd
 			 * @generated
 			 */
 			@Override
+			public Object caseProject(Project object) {
+			
+			EAnnotation annotation = null;
+				
+				annotation = ComposedMachinePackage.Literals.COMPOSED_MACHINE_.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
+					newChildDescriptors.add
+						(createChildParameter
+							(CorePackage.Literals.PROJECT__COMPONENTS,
+							 ComposedMachineFactory.eINSTANCE.createComposedMachine_()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
 			public Object caseAnnotation(Annotation object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(CorePackage.Literals.ANNOTATION__CONTENTS,
-						 ComposedMachineFactory.eINSTANCE.createComposedMachine_()));
+			
+			EAnnotation annotation = null;
+				
+				annotation = ComposedMachinePackage.Literals.COMPOSED_MACHINE_.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
+					newChildDescriptors.add
+						(createChildParameter
+							(CorePackage.Literals.ANNOTATION__CONTENTS,
+							 ComposedMachineFactory.eINSTANCE.createComposedMachine_()));
+
+				
+				annotation = ComposedMachinePackage.Literals.INCLUDED_MACHINE.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
+					newChildDescriptors.add
+						(createChildParameter
+							(CorePackage.Literals.ANNOTATION__CONTENTS,
+							 ComposedMachineFactory.eINSTANCE.createIncludedMachine()));
+
+				
+				annotation = ComposedMachinePackage.Literals.COMPOSED_EVENT.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
+					newChildDescriptors.add
+						(createChildParameter
+							(CorePackage.Literals.ANNOTATION__CONTENTS,
+							 ComposedMachineFactory.eINSTANCE.createComposedEvent()));
+
+				
+				annotation = ComposedMachinePackage.Literals.COMBINED_EVENT.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
+					newChildDescriptors.add
+						(createChildParameter
+							(CorePackage.Literals.ANNOTATION__CONTENTS,
+							 ComposedMachineFactory.eINSTANCE.createCombinedEvent()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+		   new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+		   return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return ComposedMachineEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
+	 * A child creation extender for the {@link ContextPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class ContextChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends ContextSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseContext(Context object) {
+			
+			EAnnotation annotation = null;
+				
+				annotation = ComposedMachinePackage.Literals.COMPOSED_EVENT.getEAnnotation("org.eventb.emf.core.extendedMetaClasses");
+				if (annotation == null  || annotation.getReferences().contains(object.eClass()))
+					newChildDescriptors.add
+						(createChildParameter
+							(ContextPackage.Literals.CONTEXT__CONSTANTS,
+							 ComposedMachineFactory.eINSTANCE.createComposedEvent()));
 
 				return null;
 			}

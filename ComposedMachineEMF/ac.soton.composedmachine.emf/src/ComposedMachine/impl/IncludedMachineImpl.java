@@ -1,4 +1,8 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine.impl;
 
@@ -12,9 +16,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eventb.emf.core.Project;
+
+import org.eventb.emf.core.impl.EventBNamedCommentedElementImpl;
 
 import org.eventb.emf.core.machine.Machine;
 
@@ -28,13 +33,12 @@ import org.eventb.emf.core.machine.Machine;
  *   <li>{@link ComposedMachine.impl.IncludedMachineImpl#getProject <em>Project</em>}</li>
  *   <li>{@link ComposedMachine.impl.IncludedMachineImpl#getMachine <em>Machine</em>}</li>
  *   <li>{@link ComposedMachine.impl.IncludedMachineImpl#getHasInvariant <em>Has Invariant</em>}</li>
- *   <li>{@link ComposedMachine.impl.IncludedMachineImpl#getComment <em>Comment</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine {
+public class IncludedMachineImpl extends EventBNamedCommentedElementImpl implements IncludedMachine {
 	/**
 	 * The cached value of the '{@link #getProject() <em>Project</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -74,26 +78,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 	 * @ordered
 	 */
 	protected HasInvariant hasInvariant = HAS_INVARIANT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getComment() <em>Comment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComment()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COMMENT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getComment() <em>Comment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComment()
-	 * @generated
-	 * @ordered
-	 */
-	protected String comment = COMMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,27 +200,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getComment() {
-		return comment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setComment(String newComment) {
-		String oldComment = comment;
-		comment = newComment;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComposedMachinePackage.INCLUDED_MACHINE__COMMENT, oldComment, comment));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -248,8 +211,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 				return basicGetMachine();
 			case ComposedMachinePackage.INCLUDED_MACHINE__HAS_INVARIANT:
 				return getHasInvariant();
-			case ComposedMachinePackage.INCLUDED_MACHINE__COMMENT:
-				return getComment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -270,9 +231,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 				return;
 			case ComposedMachinePackage.INCLUDED_MACHINE__HAS_INVARIANT:
 				setHasInvariant((HasInvariant)newValue);
-				return;
-			case ComposedMachinePackage.INCLUDED_MACHINE__COMMENT:
-				setComment((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -295,9 +253,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 			case ComposedMachinePackage.INCLUDED_MACHINE__HAS_INVARIANT:
 				setHasInvariant(HAS_INVARIANT_EDEFAULT);
 				return;
-			case ComposedMachinePackage.INCLUDED_MACHINE__COMMENT:
-				setComment(COMMENT_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -316,8 +271,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 				return machine != null;
 			case ComposedMachinePackage.INCLUDED_MACHINE__HAS_INVARIANT:
 				return hasInvariant != HAS_INVARIANT_EDEFAULT;
-			case ComposedMachinePackage.INCLUDED_MACHINE__COMMENT:
-				return COMMENT_EDEFAULT == null ? comment != null : !COMMENT_EDEFAULT.equals(comment);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -334,8 +287,6 @@ public class IncludedMachineImpl extends EObjectImpl implements IncludedMachine 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (hasInvariant: ");
 		result.append(hasInvariant);
-		result.append(", comment: ");
-		result.append(comment);
 		result.append(')');
 		return result.toString();
 	}

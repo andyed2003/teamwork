@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
+import org.eventb.emf.core.provider.EventBNamedCommentedComponentElementItemProvider;
 import org.eventb.emf.core.provider.EventBNamedCommentedElementItemProvider;
 
 /**
@@ -29,7 +30,7 @@ import org.eventb.emf.core.provider.EventBNamedCommentedElementItemProvider;
  * @generated
  */
 public class ComposedMachine_ItemProvider
-	extends EventBNamedCommentedElementItemProvider
+	extends EventBNamedCommentedComponentElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,

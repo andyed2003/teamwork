@@ -1,4 +1,8 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine.impl;
 
@@ -21,7 +25,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eventb.emf.core.context.Context;
 
-import org.eventb.emf.core.impl.EventBNamedCommentedElementImpl;
+import org.eventb.emf.core.impl.EventBNamedCommentedComponentElementImpl;
 
 import org.eventb.emf.core.machine.Invariant;
 import org.eventb.emf.core.machine.Machine;
@@ -43,7 +47,7 @@ import org.eventb.emf.core.machine.Machine;
  *
  * @generated
  */
-public class ComposedMachine_Impl extends EventBNamedCommentedElementImpl implements ComposedMachine_ {
+public class ComposedMachine_Impl extends EventBNamedCommentedComponentElementImpl implements ComposedMachine_ {
 	/**
 	 * The cached value of the '{@link #getRefines() <em>Refines</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

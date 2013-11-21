@@ -1,4 +1,8 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine.impl;
 
@@ -11,9 +15,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eventb.emf.core.Project;
+
+import org.eventb.emf.core.impl.EventBNamedCommentedElementImpl;
 
 import org.eventb.emf.core.machine.Event;
 import org.eventb.emf.core.machine.Machine;
@@ -33,7 +38,7 @@ import org.eventb.emf.core.machine.Machine;
  *
  * @generated
  */
-public class CombinedEventImpl extends EObjectImpl implements CombinedEvent {
+public class CombinedEventImpl extends EventBNamedCommentedElementImpl implements CombinedEvent {
 	/**
 	 * The cached value of the '{@link #getProject() <em>Project</em>}' reference.
 	 * <!-- begin-user-doc -->

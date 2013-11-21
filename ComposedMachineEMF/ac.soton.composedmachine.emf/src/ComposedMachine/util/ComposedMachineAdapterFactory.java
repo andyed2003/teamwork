@@ -1,4 +1,8 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine.util;
 
@@ -15,8 +19,11 @@ import org.eventb.emf.core.EventBCommented;
 import org.eventb.emf.core.EventBCommentedElement;
 import org.eventb.emf.core.EventBElement;
 import org.eventb.emf.core.EventBNamed;
+import org.eventb.emf.core.EventBNamedCommentedComponentElement;
 import org.eventb.emf.core.EventBNamedCommentedElement;
 import org.eventb.emf.core.EventBObject;
+
+import org.eventb.emf.core.context.Constant;
 
 /**
  * <!-- begin-user-doc -->
@@ -113,6 +120,14 @@ public class ComposedMachineAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEventBNamedCommentedElement(EventBNamedCommentedElement object) {
 				return createEventBNamedCommentedElementAdapter();
+			}
+			@Override
+			public Adapter caseEventBNamedCommentedComponentElement(EventBNamedCommentedComponentElement object) {
+				return createEventBNamedCommentedComponentElementAdapter();
+			}
+			@Override
+			public Adapter caseConstant(Constant object) {
+				return createConstantAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -271,6 +286,34 @@ public class ComposedMachineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEventBNamedCommentedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eventb.emf.core.EventBNamedCommentedComponentElement <em>Event BNamed Commented Component Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eventb.emf.core.EventBNamedCommentedComponentElement
+	 * @generated
+	 */
+	public Adapter createEventBNamedCommentedComponentElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eventb.emf.core.context.Constant <em>Constant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eventb.emf.core.context.Constant
+	 * @generated
+	 */
+	public Adapter createConstantAdapter() {
 		return null;
 	}
 

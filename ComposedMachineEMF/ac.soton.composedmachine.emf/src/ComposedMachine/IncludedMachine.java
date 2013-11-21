@@ -1,9 +1,12 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine;
 
-import org.eclipse.emf.ecore.EObject;
-
+import org.eventb.emf.core.EventBNamedCommentedElement;
 import org.eventb.emf.core.Project;
 
 import org.eventb.emf.core.machine.Machine;
@@ -19,7 +22,6 @@ import org.eventb.emf.core.machine.Machine;
  *   <li>{@link ComposedMachine.IncludedMachine#getProject <em>Project</em>}</li>
  *   <li>{@link ComposedMachine.IncludedMachine#getMachine <em>Machine</em>}</li>
  *   <li>{@link ComposedMachine.IncludedMachine#getHasInvariant <em>Has Invariant</em>}</li>
- *   <li>{@link ComposedMachine.IncludedMachine#getComment <em>Comment</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,7 +29,7 @@ import org.eventb.emf.core.machine.Machine;
  * @model
  * @generated
  */
-public interface IncludedMachine extends EObject {
+public interface IncludedMachine extends EventBNamedCommentedElement {
 	/**
 	 * Returns the value of the '<em><b>Project</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -109,31 +111,5 @@ public interface IncludedMachine extends EObject {
 	 * @generated
 	 */
 	void setHasInvariant(HasInvariant value);
-
-	/**
-	 * Returns the value of the '<em><b>Comment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Comment</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Comment</em>' attribute.
-	 * @see #setComment(String)
-	 * @see ComposedMachine.ComposedMachinePackage#getIncludedMachine_Comment()
-	 * @model
-	 * @generated
-	 */
-	String getComment();
-
-	/**
-	 * Sets the value of the '{@link ComposedMachine.IncludedMachine#getComment <em>Comment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Comment</em>' attribute.
-	 * @see #getComment()
-	 * @generated
-	 */
-	void setComment(String value);
 
 } // IncludedMachine

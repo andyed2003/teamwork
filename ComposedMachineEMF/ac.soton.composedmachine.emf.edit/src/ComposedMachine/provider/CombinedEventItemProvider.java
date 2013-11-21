@@ -3,6 +3,7 @@
 package ComposedMachine.provider;
 
 
+import ComposedMachine.CombinedEvent;
 import ComposedMachine.ComposedMachinePackage;
 
 import java.util.Collection;
@@ -21,6 +22,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eventb.emf.core.provider.EventBNamedCommentedElementItemProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
@@ -30,7 +32,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * @generated
  */
 public class CombinedEventItemProvider
-	extends ItemProviderAdapter
+	extends EventBNamedCommentedElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -150,7 +152,10 @@ public class CombinedEventItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CombinedEvent_type");
+		String label = ((CombinedEvent)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CombinedEvent_type") :
+			getString("_UI_CombinedEvent_type") + " " + label;
 	}
 
 	/**
@@ -176,17 +181,6 @@ public class CombinedEventItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

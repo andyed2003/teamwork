@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eventb.emf.core.provider.EventBNamedCommentedElementItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ComposedMachine.IncludedMachine} object.
@@ -34,7 +35,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class IncludedMachineItemProvider
-	extends ItemProviderAdapter
+	extends EventBNamedCommentedElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -65,7 +66,6 @@ public class IncludedMachineItemProvider
 			addProjectPropertyDescriptor(object);
 			addMachinePropertyDescriptor(object);
 			addHasInvariantPropertyDescriptor(object);
-			addCommentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -137,28 +137,6 @@ public class IncludedMachineItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Comment feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCommentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IncludedMachine_comment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IncludedMachine_comment_feature", "_UI_IncludedMachine_type"),
-				 ComposedMachinePackage.Literals.INCLUDED_MACHINE__COMMENT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns IncludedMachine.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,8 +155,7 @@ public class IncludedMachineItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		HasInvariant labelValue = ((IncludedMachine)object).getHasInvariant();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((IncludedMachine)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_IncludedMachine_type") :
 			getString("_UI_IncludedMachine_type") + " " + label;
@@ -197,7 +174,6 @@ public class IncludedMachineItemProvider
 
 		switch (notification.getFeatureID(IncludedMachine.class)) {
 			case ComposedMachinePackage.INCLUDED_MACHINE__HAS_INVARIANT:
-			case ComposedMachinePackage.INCLUDED_MACHINE__COMMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -214,17 +190,6 @@ public class IncludedMachineItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

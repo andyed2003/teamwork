@@ -1,9 +1,12 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine;
 
-import org.eclipse.emf.ecore.EObject;
-
+import org.eventb.emf.core.EventBNamedCommentedElement;
 import org.eventb.emf.core.Project;
 
 import org.eventb.emf.core.machine.Event;
@@ -27,7 +30,7 @@ import org.eventb.emf.core.machine.Machine;
  * @model
  * @generated
  */
-public interface CombinedEvent extends EObject {
+public interface CombinedEvent extends EventBNamedCommentedElement {
 	/**
 	 * Returns the value of the '<em><b>Project</b></em>' reference.
 	 * <!-- begin-user-doc -->

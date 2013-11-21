@@ -1,10 +1,16 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eventb.emf.core.EventBCommentedElement;
+
+import org.eventb.emf.core.context.Constant;
 
 import org.eventb.emf.core.machine.Convergence;
 import org.eventb.emf.core.machine.Event;
@@ -18,7 +24,6 @@ import org.eventb.emf.core.machine.Event;
  * The following features are supported:
  * <ul>
  *   <li>{@link ComposedMachine.ComposedEvent#getConvergence <em>Convergence</em>}</li>
- *   <li>{@link ComposedMachine.ComposedEvent#getComment <em>Comment</em>}</li>
  *   <li>{@link ComposedMachine.ComposedEvent#getRefines <em>Refines</em>}</li>
  *   <li>{@link ComposedMachine.ComposedEvent#getCombinedEvents <em>Combined Events</em>}</li>
  * </ul>
@@ -28,7 +33,7 @@ import org.eventb.emf.core.machine.Event;
  * @model
  * @generated
  */
-public interface ComposedEvent extends EObject {
+public interface ComposedEvent extends EventBCommentedElement, Constant {
 	/**
 	 * Returns the value of the '<em><b>Convergence</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eventb.emf.core.machine.Convergence}.
@@ -57,32 +62,6 @@ public interface ComposedEvent extends EObject {
 	 * @generated
 	 */
 	void setConvergence(Convergence value);
-
-	/**
-	 * Returns the value of the '<em><b>Comment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Comment</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Comment</em>' attribute.
-	 * @see #setComment(String)
-	 * @see ComposedMachine.ComposedMachinePackage#getComposedEvent_Comment()
-	 * @model
-	 * @generated
-	 */
-	String getComment();
-
-	/**
-	 * Sets the value of the '{@link ComposedMachine.ComposedEvent#getComment <em>Comment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Comment</em>' attribute.
-	 * @see #getComment()
-	 * @generated
-	 */
-	void setComment(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Refines</b></em>' containment reference list.

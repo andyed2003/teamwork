@@ -1,4 +1,8 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine.impl;
 
@@ -225,15 +229,6 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIncludedMachine_Comment() {
-		return (EAttribute)includedMachineEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getComposedEvent() {
 		return composedEventEClass;
 	}
@@ -252,17 +247,8 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComposedEvent_Comment() {
-		return (EAttribute)composedEventEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getComposedEvent_Refines() {
-		return (EReference)composedEventEClass.getEStructuralFeatures().get(2);
+		return (EReference)composedEventEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -271,7 +257,7 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 	 * @generated
 	 */
 	public EReference getComposedEvent_CombinedEvents() {
-		return (EReference)composedEventEClass.getEStructuralFeatures().get(3);
+		return (EReference)composedEventEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -358,11 +344,9 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 		createEReference(includedMachineEClass, INCLUDED_MACHINE__PROJECT);
 		createEReference(includedMachineEClass, INCLUDED_MACHINE__MACHINE);
 		createEAttribute(includedMachineEClass, INCLUDED_MACHINE__HAS_INVARIANT);
-		createEAttribute(includedMachineEClass, INCLUDED_MACHINE__COMMENT);
 
 		composedEventEClass = createEClass(COMPOSED_EVENT);
 		createEAttribute(composedEventEClass, COMPOSED_EVENT__CONVERGENCE);
-		createEAttribute(composedEventEClass, COMPOSED_EVENT__COMMENT);
 		createEReference(composedEventEClass, COMPOSED_EVENT__REFINES);
 		createEReference(composedEventEClass, COMPOSED_EVENT__COMBINED_EVENTS);
 
@@ -408,7 +392,11 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		composedMachine_EClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedElement());
+		composedMachine_EClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedComponentElement());
+		includedMachineEClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedElement());
+		composedEventEClass.getESuperTypes().add(theCorePackage.getEventBCommentedElement());
+		composedEventEClass.getESuperTypes().add(theContextPackage.getConstant());
+		combinedEventEClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(composedMachine_EClass, ComposedMachine_.class, "ComposedMachine_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -422,11 +410,9 @@ public class ComposedMachinePackageImpl extends EPackageImpl implements Composed
 		initEReference(getIncludedMachine_Project(), theCorePackage.getProject(), null, "project", null, 0, 1, IncludedMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIncludedMachine_Machine(), theMachinePackage.getMachine(), null, "machine", null, 0, 1, IncludedMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIncludedMachine_HasInvariant(), this.getHasInvariant(), "hasInvariant", "NoInvariant", 0, 1, IncludedMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIncludedMachine_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, IncludedMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(composedEventEClass, ComposedEvent.class, "ComposedEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComposedEvent_Convergence(), theMachinePackage.getConvergence(), "convergence", null, 0, 1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComposedEvent_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposedEvent_Refines(), theMachinePackage.getEvent(), null, "refines", null, 0, -1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposedEvent_CombinedEvents(), this.getCombinedEvent(), null, "combinedEvents", null, 0, -1, ComposedEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

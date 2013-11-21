@@ -1,10 +1,14 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eventb.emf.core.EventBNamedCommentedElement;
+import org.eventb.emf.core.EventBNamedCommentedComponentElement;
 
 import org.eventb.emf.core.context.Context;
 
@@ -31,7 +35,7 @@ import org.eventb.emf.core.machine.Machine;
  * @model
  * @generated
  */
-public interface ComposedMachine_ extends EventBNamedCommentedElement {
+public interface ComposedMachine_ extends EventBNamedCommentedComponentElement {
 	/**
 	 * Returns the value of the '<em><b>Refines</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eventb.emf.core.machine.Machine}.

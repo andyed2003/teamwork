@@ -26,6 +26,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eventb.emf.core.CorePackage;
+import org.eventb.emf.core.provider.EventBCommentedElementItemProvider;
 import org.eventb.emf.core.machine.Convergence;
 
 /**
@@ -35,7 +37,7 @@ import org.eventb.emf.core.machine.Convergence;
  * @generated
  */
 public class ComposedEventItemProvider
-	extends ItemProviderAdapter
+	extends EventBCommentedElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -63,12 +65,34 @@ public class ComposedEventItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addConvergencePropertyDescriptor(object);
-			addCommentPropertyDescriptor(object);
 			addRefinesPropertyDescriptor(object);
 			addCombinedEventsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EventBNamed_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EventBNamed_name_feature", "_UI_EventBNamed_type"),
+				 CorePackage.Literals.EVENT_BNAMED__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -85,28 +109,6 @@ public class ComposedEventItemProvider
 				 getString("_UI_ComposedEvent_convergence_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ComposedEvent_convergence_feature", "_UI_ComposedEvent_type"),
 				 ComposedMachinePackage.Literals.COMPOSED_EVENT__CONVERGENCE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Comment feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCommentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComposedEvent_comment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComposedEvent_comment_feature", "_UI_ComposedEvent_type"),
-				 ComposedMachinePackage.Literals.COMPOSED_EVENT__COMMENT,
 				 true,
 				 false,
 				 false,
@@ -178,8 +180,7 @@ public class ComposedEventItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Convergence labelValue = ((ComposedEvent)object).getConvergence();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ComposedEvent)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ComposedEvent_type") :
 			getString("_UI_ComposedEvent_type") + " " + label;
@@ -197,8 +198,8 @@ public class ComposedEventItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ComposedEvent.class)) {
+			case ComposedMachinePackage.COMPOSED_EVENT__NAME:
 			case ComposedMachinePackage.COMPOSED_EVENT__CONVERGENCE:
-			case ComposedMachinePackage.COMPOSED_EVENT__COMMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -215,17 +216,6 @@ public class ComposedEventItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

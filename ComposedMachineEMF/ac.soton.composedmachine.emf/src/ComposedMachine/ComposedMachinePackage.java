@@ -1,4 +1,8 @@
 /**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
  */
 package ComposedMachine;
 
@@ -75,7 +79,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___ANNOTATIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ANNOTATIONS;
+	int COMPOSED_MACHINE___ANNOTATIONS = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
@@ -84,7 +88,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___EXTENSIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__EXTENSIONS;
+	int COMPOSED_MACHINE___EXTENSIONS = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' map.
@@ -93,7 +97,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___ATTRIBUTES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ATTRIBUTES;
+	int COMPOSED_MACHINE___ATTRIBUTES = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Reference</b></em>' attribute.
@@ -102,7 +106,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___REFERENCE = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__REFERENCE;
+	int COMPOSED_MACHINE___REFERENCE = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Generated</b></em>' attribute.
@@ -111,7 +115,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__GENERATED;
+	int COMPOSED_MACHINE___GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
@@ -120,7 +124,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___LOCAL_GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__LOCAL_GENERATED;
+	int COMPOSED_MACHINE___LOCAL_GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__LOCAL_GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -129,7 +133,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___COMMENT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__COMMENT;
+	int COMPOSED_MACHINE___COMMENT = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__COMMENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -138,7 +142,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___NAME = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__NAME;
+	int COMPOSED_MACHINE___NAME = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Refines</b></em>' containment reference list.
@@ -147,7 +151,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___REFINES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 0;
+	int COMPOSED_MACHINE___REFINES = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Sees</b></em>' containment reference list.
@@ -156,7 +160,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___SEES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 1;
+	int COMPOSED_MACHINE___SEES = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Includes</b></em>' containment reference list.
@@ -165,7 +169,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___INCLUDES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 2;
+	int COMPOSED_MACHINE___INCLUDES = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Invariants</b></em>' containment reference list.
@@ -174,7 +178,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___INVARIANTS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 3;
+	int COMPOSED_MACHINE___INVARIANTS = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Composed Events</b></em>' containment reference list.
@@ -183,7 +187,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE___COMPOSED_EVENTS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 4;
+	int COMPOSED_MACHINE___COMPOSED_EVENTS = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Composed Machine </em>' class.
@@ -192,7 +196,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_MACHINE__FEATURE_COUNT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 5;
+	int COMPOSED_MACHINE__FEATURE_COUNT = CorePackage.EVENT_BNAMED_COMMENTED_COMPONENT_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link ComposedMachine.impl.IncludedMachineImpl <em>Included Machine</em>}' class.
@@ -205,31 +209,58 @@ public interface ComposedMachinePackage extends EPackage {
 	int INCLUDED_MACHINE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Project</b></em>' reference.
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCLUDED_MACHINE__PROJECT = 0;
+	int INCLUDED_MACHINE__ANNOTATIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Machine</b></em>' reference.
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCLUDED_MACHINE__MACHINE = 1;
+	int INCLUDED_MACHINE__EXTENSIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__EXTENSIONS;
 
 	/**
-	 * The feature id for the '<em><b>Has Invariant</b></em>' attribute.
+	 * The feature id for the '<em><b>Attributes</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCLUDED_MACHINE__HAS_INVARIANT = 2;
+	int INCLUDED_MACHINE__ATTRIBUTES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__REFERENCE = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__LOCAL_GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__LOCAL_GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -238,7 +269,43 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCLUDED_MACHINE__COMMENT = 3;
+	int INCLUDED_MACHINE__COMMENT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__NAME = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Project</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__PROJECT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Machine</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__MACHINE = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Has Invariant</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUDED_MACHINE__HAS_INVARIANT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Included Machine</em>' class.
@@ -247,7 +314,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCLUDED_MACHINE_FEATURE_COUNT = 4;
+	int INCLUDED_MACHINE_FEATURE_COUNT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link ComposedMachine.impl.ComposedEventImpl <em>Composed Event</em>}' class.
@@ -260,13 +327,58 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMPOSED_EVENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Convergence</b></em>' attribute.
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_EVENT__CONVERGENCE = 0;
+	int COMPOSED_EVENT__ANNOTATIONS = CorePackage.EVENT_BCOMMENTED_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__EXTENSIONS = CorePackage.EVENT_BCOMMENTED_ELEMENT__EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__ATTRIBUTES = CorePackage.EVENT_BCOMMENTED_ELEMENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__REFERENCE = CorePackage.EVENT_BCOMMENTED_ELEMENT__REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__GENERATED = CorePackage.EVENT_BCOMMENTED_ELEMENT__GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__LOCAL_GENERATED = CorePackage.EVENT_BCOMMENTED_ELEMENT__LOCAL_GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -275,7 +387,25 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_EVENT__COMMENT = 1;
+	int COMPOSED_EVENT__COMMENT = CorePackage.EVENT_BCOMMENTED_ELEMENT__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__NAME = CorePackage.EVENT_BCOMMENTED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Convergence</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_EVENT__CONVERGENCE = CorePackage.EVENT_BCOMMENTED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Refines</b></em>' containment reference list.
@@ -284,7 +414,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_EVENT__REFINES = 2;
+	int COMPOSED_EVENT__REFINES = CorePackage.EVENT_BCOMMENTED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Combined Events</b></em>' containment reference list.
@@ -293,7 +423,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_EVENT__COMBINED_EVENTS = 3;
+	int COMPOSED_EVENT__COMBINED_EVENTS = CorePackage.EVENT_BCOMMENTED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Composed Event</em>' class.
@@ -302,7 +432,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSED_EVENT_FEATURE_COUNT = 4;
+	int COMPOSED_EVENT_FEATURE_COUNT = CorePackage.EVENT_BCOMMENTED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link ComposedMachine.impl.CombinedEventImpl <em>Combined Event</em>}' class.
@@ -315,13 +445,85 @@ public interface ComposedMachinePackage extends EPackage {
 	int COMBINED_EVENT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__ANNOTATIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__EXTENSIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__ATTRIBUTES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__REFERENCE = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__LOCAL_GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__LOCAL_GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__COMMENT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINED_EVENT__NAME = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Project</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMBINED_EVENT__PROJECT = 0;
+	int COMBINED_EVENT__PROJECT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Machine</b></em>' reference.
@@ -330,7 +532,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMBINED_EVENT__MACHINE = 1;
+	int COMBINED_EVENT__MACHINE = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Event</b></em>' reference.
@@ -339,7 +541,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMBINED_EVENT__EVENT = 2;
+	int COMBINED_EVENT__EVENT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Combined Event</em>' class.
@@ -348,7 +550,7 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMBINED_EVENT_FEATURE_COUNT = 3;
+	int COMBINED_EVENT_FEATURE_COUNT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link ComposedMachine.HasInvariant <em>Has Invariant</em>}' enum.
@@ -470,17 +672,6 @@ public interface ComposedMachinePackage extends EPackage {
 	EAttribute getIncludedMachine_HasInvariant();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ComposedMachine.IncludedMachine#getComment <em>Comment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comment</em>'.
-	 * @see ComposedMachine.IncludedMachine#getComment()
-	 * @see #getIncludedMachine()
-	 * @generated
-	 */
-	EAttribute getIncludedMachine_Comment();
-
-	/**
 	 * Returns the meta object for class '{@link ComposedMachine.ComposedEvent <em>Composed Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -500,17 +691,6 @@ public interface ComposedMachinePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getComposedEvent_Convergence();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ComposedMachine.ComposedEvent#getComment <em>Comment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comment</em>'.
-	 * @see ComposedMachine.ComposedEvent#getComment()
-	 * @see #getComposedEvent()
-	 * @generated
-	 */
-	EAttribute getComposedEvent_Comment();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link ComposedMachine.ComposedEvent#getRefines <em>Refines</em>}'.
@@ -694,14 +874,6 @@ public interface ComposedMachinePackage extends EPackage {
 		EAttribute INCLUDED_MACHINE__HAS_INVARIANT = eINSTANCE.getIncludedMachine_HasInvariant();
 
 		/**
-		 * The meta object literal for the '<em><b>Comment</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INCLUDED_MACHINE__COMMENT = eINSTANCE.getIncludedMachine_Comment();
-
-		/**
 		 * The meta object literal for the '{@link ComposedMachine.impl.ComposedEventImpl <em>Composed Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -718,14 +890,6 @@ public interface ComposedMachinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPOSED_EVENT__CONVERGENCE = eINSTANCE.getComposedEvent_Convergence();
-
-		/**
-		 * The meta object literal for the '<em><b>Comment</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPOSED_EVENT__COMMENT = eINSTANCE.getComposedEvent_Comment();
 
 		/**
 		 * The meta object literal for the '<em><b>Refines</b></em>' containment reference list feature.
